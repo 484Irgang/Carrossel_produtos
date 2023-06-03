@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Mudando algumas tags base*/
 @layer base{
     body, html{
         height: 100%;
@@ -18,6 +19,7 @@
     
 }
 
+/*Criando novas classes utilitárias*/
 @layer utilities{
     .card_hover > img{
         transition-duration: 0.5s;
@@ -31,6 +33,7 @@
     }
 }
 
+/*Abaixo são os efeitos do botão VER MAIS*/
 .background_button{
     transition-duration: 0.5s;
 }
@@ -39,3 +42,23 @@
     height: 100%;
 }
 
+/*Efeito final do componente Loading*/
+.change{
+    animation-name: welcome;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes welcome{
+    from{
+        opacity: 0;
+    }
+    to{
+        background-color: transparent;
+        font-size: 32px;
+        opacity: 1;
+        color: #b90808;
+        transform: scale(3,3);
+    }
+}
